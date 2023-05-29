@@ -26,30 +26,69 @@
           <summary>
             <h3>Week 05: To-do Application Part 1</h3>
             <p>
-              <strong
-                >(May 12- May 19) React Frontend Development</strong
-              >
+              <strong>(May 12- May 19) React Frontend Development</strong>
             </p>
           </summary>
           <hr />
           <p>
-            With Ledger CLI behind us it seemed like things couldn't get much harder, looking back on it one week later that seems like a very optimistic view. Being objective the premise is much simpler, To-do apps are very common beginner projects, in essence it should be much simpler than the accounting tool that is Ledger:
+            With Ledger CLI behind us it seemed like things couldn't get much
+            harder, looking back on it one week later that seems like a very
+            optimistic view. Being objective the premise is much simpler, To-do
+            apps are very common beginner projects, in essence it should be much
+            simpler than the accounting tool that is Ledger:
           </p>
           <blockquote>
-            You are working with a client that needs to implement a to do list to help manage their tasks in their daily job. The client asked you to implement the following functionality: 
+            You are working with a client that needs to implement a to do list
+            to help manage their tasks in their daily job. The client asked you
+            to implement the following functionality:
           </blockquote>
           <h4>Back End</h4>
           <p>
-            The back end is proving to be the hardest to crack despite it only needing to handle a few requests. Personally I have no experience with Java, the language prescribed for the assignment, much less so with its related tools like Spring, Maven or Java Collections. To this we also have to add the technical issues caused by ZScaler, the company's VPN, for obvious security reasons it is particularly aggressive, which made it almost impossible to deploy locally for testing. Most of us had to resort to disabling during testing which is not an ideal solution.
+            The back end is proving to be the hardest to crack despite it only
+            needing to handle a few requests. Personally I have no experience
+            with Java, the language prescribed for the assignment, much less so
+            with its related tools like Spring, Maven or Java Collections. To
+            this we also have to add the technical issues caused by ZScaler, the
+            company's VPN, for obvious security reasons it is particularly
+            aggressive, which made it almost impossible to deploy locally for
+            testing. Most of us had to resort to disabling during testing which
+            is not an ideal solution.
           </p>
-          <img src="./pictures/address_failure.png" alt="View of Intellij Idea failing to start the local servers">
-          <p>It took essentially the whole week to get a CRUD server to run, as once we had solved the ZScaler issue we still had to deal with the fiddly Maven installation process, the breaking changes that Spring 3.0 introduced that rendered most online guides useless and in my case my own lack of familiarity with backend development.</p>
-          <img src="./pictures/maven_win.png" alt="Maven failed to install manually or with brew, SDK ended up being the best way to install">
+          <img
+            src="./pictures/address_failure.png"
+            alt="View of Intellij Idea failing to start the local servers" />
+          <p>
+            It took essentially the whole week to get a CRUD server to run, as
+            once we had solved the ZScaler issue we still had to deal with the
+            fiddly Maven installation process, the breaking changes that Spring
+            3.0 introduced that rendered most online guides useless and in my
+            case my own lack of familiarity with backend development.
+          </p>
+          <img
+            src="./pictures/maven_win.png"
+            alt="Maven failed to install manually or with brew" />
           <h4>Front End</h4>
-          <p>The front end is where most of the functionality of the program is located, the specifications were that it had to be built using React, a javascript framework. I was already familiarized with react from previous projects, but still decided to use a tutorial for building the base of the project. Compared to the back end we advanced a great deal in the span of a couple of days, with most of the functionality implemented.</p>
-          <img src="./pictures/todo_chrome_one.png" alt="View of the React app as it stands right now">
-          <p>Due to being unable to get the back end running in a timely manner the app is currently running with a Firebase database, the functions that communicate with the database have been grouped together to make the change later to the local java backend</p>
-          <img src="./pictures/firebase_vscode.png" alt="Functions that pull data from Firebase">
+          <p>
+            The front end is where most of the functionality of the program is
+            located, the specifications were that it had to be built using
+            React, a javascript framework. I was already familiarized with react
+            from previous projects, but still decided to use a tutorial for
+            building the base of the project. Compared to the back end we
+            advanced a great deal in the span of a couple of days, with most of
+            the functionality implemented.
+          </p>
+          <img
+            src="./pictures/todo_chrome_one.png"
+            alt="View of the React app as it stands right now" />
+          <p>
+            Due to being unable to get the back end running in a timely manner
+            the app is currently running with a Firebase database, the functions
+            that communicate with the database have been grouped together to
+            make the change later to the local java backend
+          </p>
+          <img
+            src="./pictures/firebase_vscode.png"
+            alt="Functions that pull data from Firebase" />
           <hr />
           <small>Uploaded on May 21, 2023</small>
         </details>
@@ -83,7 +122,7 @@
             involved, the value traded in the transaction and finally a running
             balance, which is independent for each currency or symbol used.
           </p>
-          <img src="./pictures/register.png" alt="output of register command">
+          <img src="./pictures/register.png" alt="output of register command" />
           <p>
             In order to output the data in this format the code must read
             through every filename specified in "index.ledger". Then parse every
@@ -93,7 +132,9 @@
             done to facilitate the task of formatting the output, filtering and
             sorting.
           </p>
-          <img src="./pictures/entrymaker.png" alt="code used to parse through files">
+          <img
+            src="./pictures/entrymaker.png"
+            alt="code used to parse through files" />
           <p>
             By using the optional flag <strong>--account</strong> the table can
             be narrowed down to only the transactions where the account
@@ -102,7 +143,9 @@
             <strong>register</strong> because that was simpler to implement
             using the argparse library.
           </p>
-          <img src="./pictures/register_a.png" alt="output of register command when using account flag">
+          <img
+            src="./pictures/register_a.png"
+            alt="output of register command when using account flag" />
           <h4>Command: balance</h4>
           <p>
             The command <strong>balance</strong>
@@ -112,48 +155,88 @@
             its own function. Then we simply use pandas to colapse the running
             balance column, so we only keep the last value on it.
           </p>
-          <img src="./pictures/balance_brain.png" alt="code used to create the balance output">
+          <img
+            src="./pictures/balance_brain.png"
+            alt="code used to create the balance output" />
           <p>
             Like <strong>register</strong> this command could also make use of
             the account flag to only show the total of the transactions
             involving that account.
           </p>
-          <img src="./pictures/balance_a.png" alt="output of balance command">
+          <img src="./pictures/balance_a.png" alt="output of balance command" />
           <h4>Command: print</h4>
           <p>
             The command <strong>print</strong> was to me the simplest one, as it
             only needs to read through the ledger data and prints it out in an
             homogenized format. I reused most of the code from the previous two
-            commands. As with both previous commands, <strong>print</strong> can make use
-            of the account flag to select which accounts to actually show.
+            commands. As with both previous commands, <strong>print</strong> can
+            make use of the account flag to select which accounts to actually
+            show.
           </p>
-          <img src="./pictures/print.png" alt="output of print command">
+          <img src="./pictures/print.png" alt="output of print command" />
           <h4>Flag: --prices-db</h4>
           <p>
-            The <strong>--prices-db</strong> flag does two things: It tells ledger that you want the output to show in a single currency, and in the specified file it lets you define what currency to output and what the exchange rate will be. Out of the optional flags this was the most involved one, so much that the code was split off for the register command, there is one version for its normal functioning and another for when this command is called.
+            The <strong>--prices-db</strong> flag does two things: It tells
+            ledger that you want the output to show in a single currency, and in
+            the specified file it lets you define what currency to output and
+            what the exchange rate will be. Out of the optional flags this was
+            the most involved one, so much that the code was split off for the
+            register command, there is one version for its normal functioning
+            and another for when this command is called.
           </p>
-          <img src="./pictures/prices_code.png" alt="code used to change units and convert according to exchange rate">
+          <img
+            src="./pictures/prices_code.png"
+            alt="code used to change units and convert according to exchange rate" />
           <p>
             Compare the output when the function is not called and when it is:
           </p>
-          <img src="./pictures/prices_bal.png" alt="output of balance when using prices-database command">
-          <img src="./pictures/prices_reg.png" alt="output of register when using prices-database command">
+          <img
+            src="./pictures/prices_bal.png"
+            alt="output of balance when using prices-database command" />
+          <img
+            src="./pictures/prices_reg.png"
+            alt="output of register when using prices-database command" />
           <h4>Flag: --file</h4>
           <p>
-            The <strong>--file</strong> flag specifies what file should be used as the index, the index.ledger text file contains the filenames of all entries for ledger. Being that ledger is originally an accounting tool, this could be considered a useful functionality to change between clients, for example. In the case of our implementation though we always default back to "index.ledger" when executing the code again. The implementation of this flag was very simple, we converted all references to index.ledger to variables and used an if statement to check if the flag was being passed as an argument.
+            The <strong>--file</strong> flag specifies what file should be used
+            as the index, the index.ledger text file contains the filenames of
+            all entries for ledger. Being that ledger is originally an
+            accounting tool, this could be considered a useful functionality to
+            change between clients, for example. In the case of our
+            implementation though we always default back to "index.ledger" when
+            executing the code again. The implementation of this flag was very
+            simple, we converted all references to index.ledger to variables and
+            used an if statement to check if the flag was being passed as an
+            argument.
           </p>
-          <img src="./pictures/file_code.png" alt="if statement used to check if file was passed as an argument">
+          <img
+            src="./pictures/file_code.png"
+            alt="if statement used to check if file was passed as an argument" />
           <h4>Flag: --sort</h4>
           <p>
-            The <strong>--sort</strong> flag is used to sort the output, the real <em>Ledger</em> can take any EXPR as an argument, in our case we have only included "date" and variations as valid arguments.
+            The <strong>--sort</strong> flag is used to sort the output, the
+            real <em>Ledger</em> can take any EXPR as an argument, in our case
+            we have only included "date" and variations as valid arguments.
           </p>
-          <img src="./pictures/register_sorted.png" alt="register output sorted by date">
+          <img
+            src="./pictures/register_sorted.png"
+            alt="register output sorted by date" />
           <h4>Conclusion</h4>
           <p>
-            Ledger is one of the most complex programs that I've built on my own, if not the most complex. There was a moment when I felt like the complexity was too much to handle by myself. But as I powered through I found it really rewarding and by splitting my functions over many files I found it easier to keep track of everything.
+            Ledger is one of the most complex programs that I've built on my
+            own, if not the most complex. There was a moment when I felt like
+            the complexity was too much to handle by myself. But as I powered
+            through I found it really rewarding and by splitting my functions
+            over many files I found it easier to keep track of everything.
           </p>
           <p>
-            I made many mistakes while building Ledger, I should've read more carefully what each function was supposed to do, as I found myself having to go back to tweak the code many times. However I don't regret starting to code without having the full picture, there was nothing i wrote that didn't come useful later, and I hold the belief that getting started is usually the most difficult part of any project.
+            I made many mistakes while building Ledger, I should've read more
+            carefully what each function was supposed to do, as I found myself
+            having to go back to tweak the code many times. However I don't
+            regret starting to code without having the full picture, there was
+            nothing i wrote that didn't come useful later, and I hold the belief
+            that getting started is usually the most difficult part of any
+            project.
           </p>
           <hr />
           <small>Uploaded on May 9, 2023</small>
