@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -24,115 +24,270 @@
       <article>
         <details open>
           <summary>
-            <h3>Week 06: To-do Application Part 2</h3>
+            <h3>Week 07: Lightning Talks Part 1</h3>
             <p>
-              <strong
-                >(May 21- May 28) Frontend and Backend Development</strong
-              >
+              <strong>(May 29 - June 7) 10-Minute Individual Presentation</strong>
             </p>
           </summary>
           <hr />
           <p>
-            After one more week of work I got my java API up and running, like with the frontend the trick was to start by building the most basic implementation of a todo app posible, only including id, text and done/undone status. Once I built that and connected to it with Postman I could start iterating on it, adding the endpoints and all the attributes a todo had to have to be up to the project specifications.
+            After finishing the Todo App we were tasked with the Lightning Talks, a series of three individual presentations that we should give over the next three weeks. The first of these talks should be on a topic related to the Todo App and last a total of 10 minutes plus questions. The following talks should shorten that time to 7 and then to 5 minutes.
           </p>
-          <img src="./pictures/backend_model.png" alt="Model used for the todos">
-          <img src="./pictures/backend_running.png" alt="Backend running with spring boot">
-          <p>The frontend was updated as well to be in line with the specifications for the UI. Most of the functionality that was previously located in the frontend like sorting and filtering was moved to the backend, the only functionality of this type that remained coded in the frontend was the pagination control. I consider this to be the only real deviation from the project specifications, I have to be honest and say I simply didn't manage to move it to the backend without breaking basically everything in the frontend.</p>
-          <img src="./pictures/frontend_base.png" alt="View of the frontend on loading the app, some todos have been added for visualization">
           <p>
-            Let's review the specifications for the UI:
+            In my case I decided to focus the talk on the CRUD operations: Create, Read, Update and Delete. Because I think the Todo App also serves as the perfect way to illustrate this concepts due to its functionality and architecture. The cover is a reference to the Evangelion title cards, I wonder if anyone actually caught that:
           </p>
+          <img
+            style="border-radius: 20px; width: 95%; margin: auto; display: flex; margin-bottom: 30px;"
+            src="./pictures/talk1_cover.png"
+            alt="Cover for the presentation" />
+          <p>
+            Salma invited everyone who wanted to join her to give our presentations on wednesday but I was the only one who agreed. The rest of the apprentice team decided to give their presentations on friday. Going first has both advantages and disadvantages: The advantages are that you get to set the bar since the expectations are at the lowest, you also get the feedback early and can start focusing on the next presentation sooner. As to the disadvantages, you don't get to see other people's presentations and learn from their mistakes, and have in practical terms less time to create and rehearse the presentation. 
+          </p>
+          <img
+            style="border-radius: 20px; width: 95%; margin: auto; display: flex; margin-bottom: 30px;"
+            src="./pictures/talk1_slide1.png"
+            alt="One of the slides of the presentation" />
+          <p>
+            Salma and me had to deal with some unforeseen problems too, namely we hadn't set up zoom to allow us to share our screens, so we had to get out and back into the meeting halfway before starting our respective presentations.
+          </p>
+          <p>
+            Other than that I'd say everything went pretty smoothly. I already received some of the feedback and based on that there's points that I'd like to work on. I've been told that I don't modulate my voice enough, which causes it to become a "drone" in the more wordy parts of the presentation. I've also been corrected on the pronunciation of some words, like specifically (the "a" is mute) and CRUD (pronounced "crud" instead of "cee ar u dee").
+          </p>
+          <p>
+            Some people also brought up positive points, like the visuals of the presentation and the balance between the words on the screen and those on my script.
+          </p>
+          <img
+            style="border-radius: 20px; width: 95%; margin: auto; display: flex; margin-bottom: 30px;"
+            src="./pictures/talk1_final.png"
+            alt="Final slide of the presentation" />
+          <p>
+            In the final slide of the presentation I brought back the same thought that I used to finish the blog entry last week. Some times you just need to ask for help. I wasn't able to get enough rehearsal time with Martin Cocoba, who has said he will be helping us with our LTs, that's something more I'd like to improve for the next LT.
+          </p>
+          <hr />
+          <small>Uploaded on June 7, 2023</small>
+        </details>
+      </article>
+      <article>
+        <details>
+          <summary>
+            <h3>Week 06: To-do Application Part 2</h3>
+            <p>
+              <strong>(May 21- May 28) Frontend and Backend Development</strong>
+            </p>
+          </summary>
+          <hr />
+          <p>
+            After one more week of work I got my java API up and running, like
+            with the frontend the trick was to start by building the most basic
+            implementation of a todo app posible, only including id, text and
+            done/undone status. Once I built that and connected to it with
+            Postman I could start iterating on it, adding the endpoints and all
+            the attributes a todo had to have to be up to the project
+            specifications.
+          </p>
+          <img
+            src="./pictures/backend_model.png"
+            alt="Model used for the todos" />
+          <img
+            src="./pictures/backend_running.png"
+            alt="Backend running with spring boot" />
+          <p>
+            The frontend was updated as well to be in line with the
+            specifications for the UI. Most of the functionality that was
+            previously located in the frontend like sorting and filtering was
+            moved to the backend, the only functionality of this type that
+            remained coded in the frontend was the pagination control. I
+            consider this to be the only real deviation from the project
+            specifications, I have to be honest and say I simply didn't manage
+            to move it to the backend without breaking basically everything in
+            the frontend.
+          </p>
+          <img
+            src="./pictures/frontend_base.png"
+            alt="View of the frontend on loading the app, some todos have been added for visualization" />
+          <p>Let's review the specifications for the UI:</p>
           <ol>
+            <li>Search/Filtering Controls</li>
             <li>
-              Search/Filtering Controls 
+              New To Do Button. This should open a modal to type the “to do”
+              data.
             </li>
             <li>
-              New To Do Button. This should open a modal to type the “to do” data. 
+              Priority column should show in the header the classic up and down
+              arrows to allow the user to sort.
             </li>
             <li>
-              Priority column should show in the header the classic up and down arrows to allow the user to sort.
+              Due date column should show in the header the classic up and own
+              arrows to allow the user to sort.
             </li>
             <li>
-              Due date column should show in the header the classic up and own arrows to allow the user to sort.
+              Action column to show actions (links/buttons) to allow the user to
+              delete or edit a “to do”.
             </li>
             <li>
-              Action column to show actions (links/buttons) to allow the user to delete or edit a “to do”.
+              Pagination control. Showing the pages, its number and the next and
+              previous page is enough.
             </li>
-            <li>
-              Pagination control. Showing the pages, its number and the next and previous page is enough. 
-            </li>
-            <li>
-              Area to show the metrics 
-            </li>
+            <li>Area to show the metrics</li>
           </ol>
           <p>
-            I think it's all there, I might add a parenthesis on number 5: The full specifications said that we <em>could</em> use a modal similar to the one used to add a todo, in the case of editing I decided not to grey out the rest of the page, to make it faster if I chose to edit multiple todos at the same time. 
+            I think it's all there, I might add a parenthesis on number 5: The
+            full specifications said that we <em>could</em> use a modal similar
+            to the one used to add a todo, in the case of editing I decided not
+            to grey out the rest of the page, to make it faster if I chose to
+            edit multiple todos at the same time.
           </p>
           <p>
-            We'll look at some of this points closer as we walk through the backend specifications.
+            We'll look at some of this points closer as we walk through the
+            backend specifications.
           </p>
           <h4>GET Endpoint</h4>
-          <p>The GET endpoint is by far the most complicated, as it has to handle sorting and search, a total of 4 request parameters. Despite this I think it's relatively straightforward and self-explaining, somments have been added to point what each section does:</p>
-          <img src="./pictures/backend_GET.png" alt="GET endpoint in Java backend">
           <p>
-            In our app this endpoint is called to not only on loading or searching but basically anytime a todo is updated, marked as complete or added, as it's our means of updating the display of todos without resorting to refreshing the page.
+            The GET endpoint is by far the most complicated, as it has to handle
+            sorting and search, a total of 4 request parameters. Despite this I
+            think it's relatively straightforward and self-explaining, somments
+            have been added to point what each section does:
+          </p>
+          <img
+            src="./pictures/backend_GET.png"
+            alt="GET endpoint in Java backend" />
+          <p>
+            In our app this endpoint is called to not only on loading or
+            searching but basically anytime a todo is updated, marked as
+            complete or added, as it's our means of updating the display of
+            todos without resorting to refreshing the page.
           </p>
           <h4>POST Endpoint</h4>
           <p>
-            The POST endpoint is set to receive a task object, it performs validations by making sure the received task has the bare minimum attributes required, a text field and a priority. In theory it is also impossible to submit an empty Todo from the frontend.
+            The POST endpoint is set to receive a task object, it performs
+            validations by making sure the received task has the bare minimum
+            attributes required, a text field and a priority. In theory it is
+            also impossible to submit an empty Todo from the frontend.
           </p>
-          <img src="./pictures/backend_POST.png" alt="POST endpoint in Java backend">
+          <img
+            src="./pictures/backend_POST.png"
+            alt="POST endpoint in Java backend" />
           <p>
-            As specified, the POST request is made when we click "Add" on our modal element. Priority is set to "Low" by default and the user is not given the choice to submit a todo without a priority.
+            As specified, the POST request is made when we click "Add" on our
+            modal element. Priority is set to "Low" by default and the user is
+            not given the choice to submit a todo without a priority.
           </p>
-          <img src="./pictures/frontend_modal.png" alt="View of the modal element in frontend">
+          <img
+            src="./pictures/frontend_modal.png"
+            alt="View of the modal element in frontend" />
           <h4>PUT Endpoints</h4>
           <p>
-            There are actually three separate PUT requests that can be made to the API, one for the edit menu where we can change a todo's text, priority and due date, one for marking a todo as done, and a final one to mark a todo as undone. I personally would have preferred to use a single "toggle" endpoint to manage both done and undone states, but such was the specification.
+            There are actually three separate PUT requests that can be made to
+            the API, one for the edit menu where we can change a todo's text,
+            priority and due date, one for marking a todo as done, and a final
+            one to mark a todo as undone. I personally would have preferred to
+            use a single "toggle" endpoint to manage both done and undone
+            states, but such was the specification.
           </p>
-          <img src="./pictures/backend_PUT.png" alt="All three PUT endpoints in the API">
-          Each endpoint receives an ID in order to find the todo that is going to be updated. In the case of the updateTodo function we also receive a task object containing the new information, the same basic validations as in the createTodo function are also performed.
-          <img src="./pictures/frontend_edit.png" alt="Editing the todos from the frontend">
+          <img
+            src="./pictures/backend_PUT.png"
+            alt="All three PUT endpoints in the API" />
+          Each endpoint receives an ID in order to find the todo that is going
+          to be updated. In the case of the updateTodo function we also receive
+          a task object containing the new information, the same basic
+          validations as in the createTodo function are also performed.
+          <img
+            src="./pictures/frontend_edit.png"
+            alt="Editing the todos from the frontend" />
           <h4>DELETE Endpoint</h4>
           <p>
-            Something that was missing in the original specification was an endpoint in the API to delete todos, the especifications only said that we should have the means to do it but not how. If there was another way to achieve the same thing it didn't seem obvious to me.
+            Something that was missing in the original specification was an
+            endpoint in the API to delete todos, the especifications only said
+            that we should have the means to do it but not how. If there was
+            another way to achieve the same thing it didn't seem obvious to me.
           </p>
-          <img src="./pictures/backend_DELETE.png" alt="The endpoint used to delete todos">
+          <img
+            src="./pictures/backend_DELETE.png"
+            alt="The endpoint used to delete todos" />
           <h4>Conclusion</h4>
-          <p>It's hard for me to write a conclusion to this entry because there is still work left to do, namely implementing the tests. However speaking on the experience so far I have to say this project taught me to ask for help when stuck, I lost a good four days of progress just trying to figure out how to run the Java backend, when I finally decided to just ask someone we got the basics of the API done in about three hours. For the tests I'll go straight to the point and ask one of the other apprentices who has already implemented them in their apps.</p>
+          <p>
+            It's hard for me to write a conclusion to this entry because there
+            is still work left to do, namely implementing the tests. However
+            speaking on the experience so far I have to say this project taught
+            me to ask for help when stuck, I lost a good four days of progress
+            just trying to figure out how to run the Java backend, when I
+            finally decided to just ask someone we got the basics of the API
+            done in about three hours. For the tests I'll go straight to the
+            point and ask one of the other apprentices who has already
+            implemented them in their apps.
+          </p>
           <hr />
           <small>Uploaded on May 28, 2023</small>
         </details>
       </article>
       <article>
-        <details open>
+        <details>
           <summary>
             <h3>Week 05: To-do Application Part 1</h3>
             <p>
-              <strong
-                >(May 12- May 19) React Frontend Development</strong
-              >
+              <strong>(May 12- May 19) React Frontend Development</strong>
             </p>
           </summary>
           <hr />
           <p>
-            With Ledger CLI behind us it seemed like things couldn't get much harder, looking back on it one week later that seems like a very optimistic view. Being objective the premise is much simpler, To-do apps are very common beginner projects, in essence it should be much simpler than the accounting tool that is Ledger:
+            With Ledger CLI behind us it seemed like things couldn't get much
+            harder, looking back on it one week later that seems like a very
+            optimistic view. Being objective the premise is much simpler, To-do
+            apps are very common beginner projects, in essence it should be much
+            simpler than the accounting tool that is Ledger:
           </p>
           <blockquote>
-            You are working with a client that needs to implement a to do list to help manage their tasks in their daily job. The client asked you to implement the following functionality: 
+            You are working with a client that needs to implement a to do list
+            to help manage their tasks in their daily job. The client asked you
+            to implement the following functionality:
           </blockquote>
           <h4>Back End</h4>
           <p>
-            The back end is proving to be the hardest to crack despite it only needing to handle a few requests. Personally I have no experience with Java, the language prescribed for the assignment, much less so with its related tools like Spring, Maven or Java Collections. To this we also have to add the technical issues caused by ZScaler, the company's VPN, for obvious security reasons it is particularly aggressive, which made it almost impossible to deploy locally for testing. Most of us had to resort to disabling during testing which is not an ideal solution.
+            The back end is proving to be the hardest to crack despite it only
+            needing to handle a few requests. Personally I have no experience
+            with Java, the language prescribed for the assignment, much less so
+            with its related tools like Spring, Maven or Java Collections. To
+            this we also have to add the technical issues caused by ZScaler, the
+            company's VPN, for obvious security reasons it is particularly
+            aggressive, which made it almost impossible to deploy locally for
+            testing. Most of us had to resort to disabling during testing which
+            is not an ideal solution.
           </p>
-          <img src="./pictures/address_failure.png" alt="View of Intellij Idea failing to start the local servers">
-          <p>It took essentially the whole week to get a CRUD server to run, as once we had solved the ZScaler issue we still had to deal with the fiddly Maven installation process, the breaking changes that Spring 3.0 introduced that rendered most online guides useless and in my case my own lack of familiarity with backend development.</p>
-          <img src="./pictures/maven_win.png" alt="Maven failed to install manually or with brew, SDK ended up being the best way to install">
+          <img
+            src="./pictures/address_failure.png"
+            alt="View of Intellij Idea failing to start the local servers" />
+          <p>
+            It took essentially the whole week to get a CRUD server to run, as
+            once we had solved the ZScaler issue we still had to deal with the
+            fiddly Maven installation process, the breaking changes that Spring
+            3.0 introduced that rendered most online guides useless and in my
+            case my own lack of familiarity with backend development.
+          </p>
+          <img
+            src="./pictures/maven_win.png"
+            alt="Maven failed to install manually or with brew" />
           <h4>Front End</h4>
-          <p>The front end is where most of the functionality of the program is located, the specifications were that it had to be built using React, a javascript framework. I was already familiarized with react from previous projects, but still decided to use a tutorial for building the base of the project. Compared to the back end we advanced a great deal in the span of a couple of days, with most of the functionality implemented.</p>
-          <img src="./pictures/todo_chrome_one.png" alt="View of the React app as it stands right now">
-          <p>Due to being unable to get the back end running in a timely manner the app is currently running with a Firebase database, the functions that communicate with the database have been grouped together to make the change later to the local java backend</p>
-          <img src="./pictures/firebase_vscode.png" alt="Functions that pull data from Firebase">
+          <p>
+            The front end is where most of the functionality of the program is
+            located, the specifications were that it had to be built using
+            React, a javascript framework. I was already familiarized with react
+            from previous projects, but still decided to use a tutorial for
+            building the base of the project. Compared to the back end we
+            advanced a great deal in the span of a couple of days, with most of
+            the functionality implemented.
+          </p>
+          <img
+            src="./pictures/todo_chrome_one.png"
+            alt="View of the React app as it stands right now" />
+          <p>
+            Due to being unable to get the back end running in a timely manner
+            the app is currently running with a Firebase database, the functions
+            that communicate with the database have been grouped together to
+            make the change later to the local java backend
+          </p>
+          <img
+            src="./pictures/firebase_vscode.png"
+            alt="Functions that pull data from Firebase" />
           <hr />
           <small>Uploaded on May 21, 2023</small>
         </details>
@@ -166,7 +321,7 @@
             involved, the value traded in the transaction and finally a running
             balance, which is independent for each currency or symbol used.
           </p>
-          <img src="./pictures/register.png" alt="output of register command">
+          <img src="./pictures/register.png" alt="output of register command" />
           <p>
             In order to output the data in this format the code must read
             through every filename specified in "index.ledger". Then parse every
@@ -176,7 +331,9 @@
             done to facilitate the task of formatting the output, filtering and
             sorting.
           </p>
-          <img src="./pictures/entrymaker.png" alt="code used to parse through files">
+          <img
+            src="./pictures/entrymaker.png"
+            alt="code used to parse through files" />
           <p>
             By using the optional flag <strong>--account</strong> the table can
             be narrowed down to only the transactions where the account
@@ -185,7 +342,9 @@
             <strong>register</strong> because that was simpler to implement
             using the argparse library.
           </p>
-          <img src="./pictures/register_a.png" alt="output of register command when using account flag">
+          <img
+            src="./pictures/register_a.png"
+            alt="output of register command when using account flag" />
           <h4>Command: balance</h4>
           <p>
             The command <strong>balance</strong>
@@ -195,48 +354,88 @@
             its own function. Then we simply use pandas to colapse the running
             balance column, so we only keep the last value on it.
           </p>
-          <img src="./pictures/balance_brain.png" alt="code used to create the balance output">
+          <img
+            src="./pictures/balance_brain.png"
+            alt="code used to create the balance output" />
           <p>
             Like <strong>register</strong> this command could also make use of
             the account flag to only show the total of the transactions
             involving that account.
           </p>
-          <img src="./pictures/balance_a.png" alt="output of balance command">
+          <img src="./pictures/balance_a.png" alt="output of balance command" />
           <h4>Command: print</h4>
           <p>
             The command <strong>print</strong> was to me the simplest one, as it
             only needs to read through the ledger data and prints it out in an
             homogenized format. I reused most of the code from the previous two
-            commands. As with both previous commands, <strong>print</strong> can make use
-            of the account flag to select which accounts to actually show.
+            commands. As with both previous commands, <strong>print</strong> can
+            make use of the account flag to select which accounts to actually
+            show.
           </p>
-          <img src="./pictures/print.png" alt="output of print command">
+          <img src="./pictures/print.png" alt="output of print command" />
           <h4>Flag: --prices-db</h4>
           <p>
-            The <strong>--prices-db</strong> flag does two things: It tells ledger that you want the output to show in a single currency, and in the specified file it lets you define what currency to output and what the exchange rate will be. Out of the optional flags this was the most involved one, so much that the code was split off for the register command, there is one version for its normal functioning and another for when this command is called.
+            The <strong>--prices-db</strong> flag does two things: It tells
+            ledger that you want the output to show in a single currency, and in
+            the specified file it lets you define what currency to output and
+            what the exchange rate will be. Out of the optional flags this was
+            the most involved one, so much that the code was split off for the
+            register command, there is one version for its normal functioning
+            and another for when this command is called.
           </p>
-          <img src="./pictures/prices_code.png" alt="code used to change units and convert according to exchange rate">
+          <img
+            src="./pictures/prices_code.png"
+            alt="code used to change units and convert according to exchange rate" />
           <p>
             Compare the output when the function is not called and when it is:
           </p>
-          <img src="./pictures/prices_bal.png" alt="output of balance when using prices-database command">
-          <img src="./pictures/prices_reg.png" alt="output of register when using prices-database command">
+          <img
+            src="./pictures/prices_bal.png"
+            alt="output of balance when using prices-database command" />
+          <img
+            src="./pictures/prices_reg.png"
+            alt="output of register when using prices-database command" />
           <h4>Flag: --file</h4>
           <p>
-            The <strong>--file</strong> flag specifies what file should be used as the index, the index.ledger text file contains the filenames of all entries for ledger. Being that ledger is originally an accounting tool, this could be considered a useful functionality to change between clients, for example. In the case of our implementation though we always default back to "index.ledger" when executing the code again. The implementation of this flag was very simple, we converted all references to index.ledger to variables and used an if statement to check if the flag was being passed as an argument.
+            The <strong>--file</strong> flag specifies what file should be used
+            as the index, the index.ledger text file contains the filenames of
+            all entries for ledger. Being that ledger is originally an
+            accounting tool, this could be considered a useful functionality to
+            change between clients, for example. In the case of our
+            implementation though we always default back to "index.ledger" when
+            executing the code again. The implementation of this flag was very
+            simple, we converted all references to index.ledger to variables and
+            used an if statement to check if the flag was being passed as an
+            argument.
           </p>
-          <img src="./pictures/file_code.png" alt="if statement used to check if file was passed as an argument">
+          <img
+            src="./pictures/file_code.png"
+            alt="if statement used to check if file was passed as an argument" />
           <h4>Flag: --sort</h4>
           <p>
-            The <strong>--sort</strong> flag is used to sort the output, the real <em>Ledger</em> can take any EXPR as an argument, in our case we have only included "date" and variations as valid arguments.
+            The <strong>--sort</strong> flag is used to sort the output, the
+            real <em>Ledger</em> can take any EXPR as an argument, in our case
+            we have only included "date" and variations as valid arguments.
           </p>
-          <img src="./pictures/register_sorted.png" alt="register output sorted by date">
+          <img
+            src="./pictures/register_sorted.png"
+            alt="register output sorted by date" />
           <h4>Conclusion</h4>
           <p>
-            Ledger is one of the most complex programs that I've built on my own, if not the most complex. There was a moment when I felt like the complexity was too much to handle by myself. But as I powered through I found it really rewarding and by splitting my functions over many files I found it easier to keep track of everything.
+            Ledger is one of the most complex programs that I've built on my
+            own, if not the most complex. There was a moment when I felt like
+            the complexity was too much to handle by myself. But as I powered
+            through I found it really rewarding and by splitting my functions
+            over many files I found it easier to keep track of everything.
           </p>
           <p>
-            I made many mistakes while building Ledger, I should've read more carefully what each function was supposed to do, as I found myself having to go back to tweak the code many times. However I don't regret starting to code without having the full picture, there was nothing i wrote that didn't come useful later, and I hold the belief that getting started is usually the most difficult part of any project.
+            I made many mistakes while building Ledger, I should've read more
+            carefully what each function was supposed to do, as I found myself
+            having to go back to tweak the code many times. However I don't
+            regret starting to code without having the full picture, there was
+            nothing i wrote that didn't come useful later, and I hold the belief
+            that getting started is usually the most difficult part of any
+            project.
           </p>
           <hr />
           <small>Uploaded on May 9, 2023</small>
