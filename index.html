@@ -6,68 +6,194 @@
     <!-- Pico.CSS -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+    />
     <!-- Stylesheet -->
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <title>Jose Arana Blog</title>
   </head>
   <body>
-    <header class="hero">
-      <div class="container">
-        <hgroup>
-          <h1>Apprenticeship Blog</h1>
-          <p class="titledark"><strong>by Jose Arana</strong></p>
-        </hgroup>
-      </div>
-    </header>
+    <nav class="container">
+      <ul>
+        <li><strong>Francisco Arana - Personal Blog</strong></li>
+      </ul>
+      <ul>
+        <li><a href="#Example">About Me</a></li>
+        <li>
+          <details role="list" dir="rtl">
+            <summary aria-haspopup="listbox" role="link">Jump To</summary>
+            <ul role="listbox">
+              <li><a href="#week08">Week 08</a></li>
+              <li><a href="#week07">Week 07</a></li>
+              <li><a href="#week06">Week 06</a></li>
+              <li><a href="#week05">Week 05</a></li>
+              <li><a href="#week04">Week 04</a></li>
+              <li><a href="#week03">Week 03</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </nav>
     <main class="container">
-      <article>
+      <article id="week08">
         <details open>
           <summary>
-            <h3>Week 07: Lightning Talks Part 1</h3>
+            <h3>Week 08: Hyperskill Part 1</h3>
             <p>
-              <strong>(May 29 - June 7) 10-Minute Individual Presentation</strong>
+              <strong>(June 5 - June 10) Music Advisor Online Course</strong>
             </p>
           </summary>
           <hr />
           <p>
-            After finishing the Todo App we were tasked with the Lightning Talks, a series of three individual presentations that we should give over the next three weeks. The first of these talks should be on a topic related to the Todo App and last a total of 10 minutes plus questions. The following talks should shorten that time to 7 and then to 5 minutes.
+            I must admit that I was pretty excited to start the Hyperskill
+            module, most of what I knew about software prior to entering the
+            apprenticeship program I learned in online platforms like Coursera,
+            Udemy and Khan Academy. So at least on paper it seemed like I'd be
+            at home in the Hyperskill platform, things didn't go as smoothly as
+            I'd have hoped though.
           </p>
           <p>
-            In my case I decided to focus the talk on the CRUD operations: Create, Read, Update and Delete. Because I think the Todo App also serves as the perfect way to illustrate this concepts due to its functionality and architecture. The cover is a reference to the Evangelion title cards, I wonder if anyone actually caught that:
+            The first sign that something was different with Hyperskill was
+            perhaps the project times. Usually when starting out with a new
+            programming language you're told to do (many) short projects in the
+            style of "100 days of code" challenges, but instead we were tasked
+            with three projects that according to the platform took a couple
+            dozen hours to complete each, something that on paper seems like a
+            pretty daunting task. On a related note, the estimates themselves
+            also seem far too optimistic, as I put a week of full time work into
+            the first project and I'm just over the halfway mark it seems.
+          </p>
+          <p>
+            To be fair though, I can imagine that it's only taking so long for
+            me to work through the project because I'm almost a complete
+            beginner in all things Java, something that should be clear to
+            anyone who looks through the code for my To Do App. In that regard
+            the lessons that are interspersed with the projects have been quite
+            useful, and I can already imagine how much I could improve on that
+            code with what I learned through this week. Just as easily I can
+            also imagine a more experienced Java user or someone with a more
+            formal education skipping through those lessons and finishing the
+            project in half of what it's said to take to complete.
+          </p>
+          <p>
+            To me the most interesting lessons so far have been those at the end
+            of stage 2/5, until then most lessons were dealing with concepts I
+            already knew except now on Java, but stuff like Software
+            Architecture, Patterns, Class Diagrams, all those are entirely new
+            to me, only having heard about them without actually having an
+            understanding of what they were and why they were useful.
           </p>
           <img
-            style="border-radius: 20px; width: 95%; margin: auto; display: flex; margin-bottom: 30px;"
+            src="./pictures/hyperskill_lessons.png"
+            alt="Lessons at the end of stage 2"
+          />
+          <hr />
+          <small>Uploaded on June 11, 2023</small>
+        </details>
+      </article>
+      <article id="week07">
+        <details open>
+          <summary>
+            <h3>Week 07: Lightning Talks Part 1</h3>
+            <p>
+              <strong
+                >(May 29 - June 7) 10-Minute Individual Presentation</strong
+              >
+            </p>
+          </summary>
+          <hr />
+          <p>
+            After finishing the Todo App we were tasked with the Lightning
+            Talks, a series of three individual presentations that we should
+            give over the next three weeks. The first of these talks should be
+            on a topic related to the Todo App and last a total of 10 minutes
+            plus questions. The following talks should shorten that time to 7
+            and then to 5 minutes.
+          </p>
+          <p>
+            In my case I decided to focus the talk on the CRUD operations:
+            Create, Read, Update and Delete. Because I think the Todo App also
+            serves as the perfect way to illustrate this concepts due to its
+            functionality and architecture. The cover is a reference to the
+            Evangelion title cards, I wonder if anyone actually caught that:
+          </p>
+          <img
+            style="
+              border-radius: 20px;
+              width: 95%;
+              margin: auto;
+              display: flex;
+              margin-bottom: 30px;
+            "
             src="./pictures/talk1_cover.png"
-            alt="Cover for the presentation" />
+            alt="Cover for the presentation"
+          />
           <p>
-            Salma invited everyone who wanted to join her to give our presentations on wednesday but I was the only one who agreed. The rest of the apprentice team decided to give their presentations on friday. Going first has both advantages and disadvantages: The advantages are that you get to set the bar since the expectations are at the lowest, you also get the feedback early and can start focusing on the next presentation sooner. As to the disadvantages, you don't get to see other people's presentations and learn from their mistakes, and have in practical terms less time to create and rehearse the presentation. 
+            Salma invited everyone who wanted to join her to give our
+            presentations on wednesday but I was the only one who agreed. The
+            rest of the apprentice team decided to give their presentations on
+            friday. Going first has both advantages and disadvantages: The
+            advantages are that you get to set the bar since the expectations
+            are at the lowest, you also get the feedback early and can start
+            focusing on the next presentation sooner. As to the disadvantages,
+            you don't get to see other people's presentations and learn from
+            their mistakes, and have in practical terms less time to create and
+            rehearse the presentation.
           </p>
           <img
-            style="border-radius: 20px; width: 95%; margin: auto; display: flex; margin-bottom: 30px;"
+            style="
+              border-radius: 20px;
+              width: 95%;
+              margin: auto;
+              display: flex;
+              margin-bottom: 30px;
+            "
             src="./pictures/talk1_slide1.png"
-            alt="One of the slides of the presentation" />
+            alt="One of the slides of the presentation"
+          />
           <p>
-            Salma and me had to deal with some unforeseen problems too, namely we hadn't set up zoom to allow us to share our screens, so we had to get out and back into the meeting halfway before starting our respective presentations.
+            Salma and me had to deal with some unforeseen problems too, namely
+            we hadn't set up zoom to allow us to share our screens, so we had to
+            get out and back into the meeting halfway before starting our
+            respective presentations.
           </p>
           <p>
-            Other than that I'd say everything went pretty smoothly. I already received some of the feedback and based on that there's points that I'd like to work on. I've been told that I don't modulate my voice enough, which causes it to become a "drone" in the more wordy parts of the presentation. I've also been corrected on the pronunciation of some words, like specifically (the "a" is mute) and CRUD (pronounced "crud" instead of "cee ar u dee").
+            Other than that I'd say everything went pretty smoothly. I already
+            received some of the feedback and based on that there's points that
+            I'd like to work on. I've been told that I don't modulate my voice
+            enough, which causes it to become a "drone" in the more wordy parts
+            of the presentation. I've also been corrected on the pronunciation
+            of some words, like specifically (the "a" is mute) and CRUD
+            (pronounced "crud" instead of "cee ar u dee").
           </p>
           <p>
-            Some people also brought up positive points, like the visuals of the presentation and the balance between the words on the screen and those on my script.
+            Some people also brought up positive points, like the visuals of the
+            presentation and the balance between the words on the screen and
+            those on my script.
           </p>
           <img
-            style="border-radius: 20px; width: 95%; margin: auto; display: flex; margin-bottom: 30px;"
+            style="
+              border-radius: 20px;
+              width: 95%;
+              margin: auto;
+              display: flex;
+              margin-bottom: 30px;
+            "
             src="./pictures/talk1_final.png"
-            alt="Final slide of the presentation" />
+            alt="Final slide of the presentation"
+          />
           <p>
-            In the final slide of the presentation I brought back the same thought that I used to finish the blog entry last week. Some times you just need to ask for help. I wasn't able to get enough rehearsal time with Martin Cocoba, who has said he will be helping us with our LTs, that's something more I'd like to improve for the next LT.
+            In the final slide of the presentation I brought back the same
+            thought that I used to finish the blog entry last week. Some times
+            you just need to ask for help. I wasn't able to get enough rehearsal
+            time with Martin Cocoba, who has said he will be helping us with our
+            LTs, that's something more I'd like to improve for the next LT.
           </p>
           <hr />
           <small>Uploaded on June 7, 2023</small>
         </details>
       </article>
-      <article>
+      <article id="week06">
         <details>
           <summary>
             <h3>Week 06: To-do Application Part 2</h3>
@@ -87,10 +213,12 @@
           </p>
           <img
             src="./pictures/backend_model.png"
-            alt="Model used for the todos" />
+            alt="Model used for the todos"
+          />
           <img
             src="./pictures/backend_running.png"
-            alt="Backend running with spring boot" />
+            alt="Backend running with spring boot"
+          />
           <p>
             The frontend was updated as well to be in line with the
             specifications for the UI. Most of the functionality that was
@@ -104,7 +232,8 @@
           </p>
           <img
             src="./pictures/frontend_base.png"
-            alt="View of the frontend on loading the app, some todos have been added for visualization" />
+            alt="View of the frontend on loading the app, some todos have been added for visualization"
+          />
           <p>Let's review the specifications for the UI:</p>
           <ol>
             <li>Search/Filtering Controls</li>
@@ -150,7 +279,8 @@
           </p>
           <img
             src="./pictures/backend_GET.png"
-            alt="GET endpoint in Java backend" />
+            alt="GET endpoint in Java backend"
+          />
           <p>
             In our app this endpoint is called to not only on loading or
             searching but basically anytime a todo is updated, marked as
@@ -166,7 +296,8 @@
           </p>
           <img
             src="./pictures/backend_POST.png"
-            alt="POST endpoint in Java backend" />
+            alt="POST endpoint in Java backend"
+          />
           <p>
             As specified, the POST request is made when we click "Add" on our
             modal element. Priority is set to "Low" by default and the user is
@@ -174,7 +305,8 @@
           </p>
           <img
             src="./pictures/frontend_modal.png"
-            alt="View of the modal element in frontend" />
+            alt="View of the modal element in frontend"
+          />
           <h4>PUT Endpoints</h4>
           <p>
             There are actually three separate PUT requests that can be made to
@@ -186,14 +318,16 @@
           </p>
           <img
             src="./pictures/backend_PUT.png"
-            alt="All three PUT endpoints in the API" />
+            alt="All three PUT endpoints in the API"
+          />
           Each endpoint receives an ID in order to find the todo that is going
           to be updated. In the case of the updateTodo function we also receive
           a task object containing the new information, the same basic
           validations as in the createTodo function are also performed.
           <img
             src="./pictures/frontend_edit.png"
-            alt="Editing the todos from the frontend" />
+            alt="Editing the todos from the frontend"
+          />
           <h4>DELETE Endpoint</h4>
           <p>
             Something that was missing in the original specification was an
@@ -203,7 +337,8 @@
           </p>
           <img
             src="./pictures/backend_DELETE.png"
-            alt="The endpoint used to delete todos" />
+            alt="The endpoint used to delete todos"
+          />
           <h4>Conclusion</h4>
           <p>
             It's hard for me to write a conclusion to this entry because there
@@ -220,7 +355,7 @@
           <small>Uploaded on May 28, 2023</small>
         </details>
       </article>
-      <article>
+      <article id="week05">
         <details>
           <summary>
             <h3>Week 05: To-do Application Part 1</h3>
@@ -255,7 +390,8 @@
           </p>
           <img
             src="./pictures/address_failure.png"
-            alt="View of Intellij Idea failing to start the local servers" />
+            alt="View of Intellij Idea failing to start the local servers"
+          />
           <p>
             It took essentially the whole week to get a CRUD server to run, as
             once we had solved the ZScaler issue we still had to deal with the
@@ -265,7 +401,8 @@
           </p>
           <img
             src="./pictures/maven_win.png"
-            alt="Maven failed to install manually or with brew" />
+            alt="Maven failed to install manually or with brew"
+          />
           <h4>Front End</h4>
           <p>
             The front end is where most of the functionality of the program is
@@ -278,7 +415,8 @@
           </p>
           <img
             src="./pictures/todo_chrome_one.png"
-            alt="View of the React app as it stands right now" />
+            alt="View of the React app as it stands right now"
+          />
           <p>
             Due to being unable to get the back end running in a timely manner
             the app is currently running with a Firebase database, the functions
@@ -287,12 +425,13 @@
           </p>
           <img
             src="./pictures/firebase_vscode.png"
-            alt="Functions that pull data from Firebase" />
+            alt="Functions that pull data from Firebase"
+          />
           <hr />
           <small>Uploaded on May 21, 2023</small>
         </details>
       </article>
-      <article>
+      <article id="week04">
         <details>
           <summary>
             <h3>Week 04: A Breakable Toy Experiment</h3>
@@ -333,7 +472,8 @@
           </p>
           <img
             src="./pictures/entrymaker.png"
-            alt="code used to parse through files" />
+            alt="code used to parse through files"
+          />
           <p>
             By using the optional flag <strong>--account</strong> the table can
             be narrowed down to only the transactions where the account
@@ -344,7 +484,8 @@
           </p>
           <img
             src="./pictures/register_a.png"
-            alt="output of register command when using account flag" />
+            alt="output of register command when using account flag"
+          />
           <h4>Command: balance</h4>
           <p>
             The command <strong>balance</strong>
@@ -356,7 +497,8 @@
           </p>
           <img
             src="./pictures/balance_brain.png"
-            alt="code used to create the balance output" />
+            alt="code used to create the balance output"
+          />
           <p>
             Like <strong>register</strong> this command could also make use of
             the account flag to only show the total of the transactions
@@ -385,16 +527,19 @@
           </p>
           <img
             src="./pictures/prices_code.png"
-            alt="code used to change units and convert according to exchange rate" />
+            alt="code used to change units and convert according to exchange rate"
+          />
           <p>
             Compare the output when the function is not called and when it is:
           </p>
           <img
             src="./pictures/prices_bal.png"
-            alt="output of balance when using prices-database command" />
+            alt="output of balance when using prices-database command"
+          />
           <img
             src="./pictures/prices_reg.png"
-            alt="output of register when using prices-database command" />
+            alt="output of register when using prices-database command"
+          />
           <h4>Flag: --file</h4>
           <p>
             The <strong>--file</strong> flag specifies what file should be used
@@ -410,7 +555,8 @@
           </p>
           <img
             src="./pictures/file_code.png"
-            alt="if statement used to check if file was passed as an argument" />
+            alt="if statement used to check if file was passed as an argument"
+          />
           <h4>Flag: --sort</h4>
           <p>
             The <strong>--sort</strong> flag is used to sort the output, the
@@ -419,7 +565,8 @@
           </p>
           <img
             src="./pictures/register_sorted.png"
-            alt="register output sorted by date" />
+            alt="register output sorted by date"
+          />
           <h4>Conclusion</h4>
           <p>
             Ledger is one of the most complex programs that I've built on my
@@ -441,7 +588,7 @@
           <small>Uploaded on May 9, 2023</small>
         </details>
       </article>
-      <article>
+      <article id="week03">
         <details>
           <summary>
             <h3>Week 03: Come Together</h3>
