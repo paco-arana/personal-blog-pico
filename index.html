@@ -23,18 +23,102 @@
           <details role="list" dir="rtl">
             <summary aria-haspopup="listbox" role="link">Jump To</summary>
             <ul role="listbox">
+              <li><a href="#week09">Week 09</a></li>
               <li><a href="#week08">Week 08</a></li>
               <li><a href="#week07">Week 07</a></li>
               <li><a href="#week06">Week 06</a></li>
               <li><a href="#week05">Week 05</a></li>
               <li><a href="#week04">Week 04</a></li>
               <li><a href="#week03">Week 03</a></li>
+              <li><a href="#week02">Week 02</a></li>
+              <li><a href="#week01">Week 01</a></li>
             </ul>
           </details>
         </li>
       </ul>
     </nav>
     <main class="container">
+      <article id="week09">
+        <details open>
+          <summary>
+            <h3>Week 09: Hyperskill Part 2</h3>
+            <p>
+              <strong>(June 11 - June 17) Music Advisor Wrap-up</strong>
+            </p>
+          </summary>
+          <hr />
+          <p>
+            No big change of pace this week, we picked up right where we had
+            left off, having just finished stage 2 of the
+            <strong>Music Advisor</strong>. Stages 3, 4 and 5 were lighter on
+            the theory but much heavier on the practice. I spent a couple days
+            stuck at stage 3/5, just couldn't wrap my mind around how HTTP
+            requests worked on Java and if I'm honest never really felt I
+            understood it completely, I sort of pieced it through trial and
+            error. The weird thing is that now that I look back on it it's
+            crystal clear what it does, but at the time? I felt like I was
+            writing a magic spell rather than code:
+          </p>
+          <img
+            src="./pictures/hyperskill_authcode.png"
+            alt="Authorization code"
+          />
+          <p>
+            The good part is that I'd then have to do more of the same for stage
+            4/5, so now it's almost burnt into my memory, it should be much
+            easier to figure it out if i ever do forget it.
+          </p>
+          <p>
+            The real challenge for stage 4 was actually the tests. I spent a
+            whole afternoon figuring out how to work around one of the tests, as
+            it seemed like the logic of the test itself was internally flawed in
+            some way. The comments in Hyperskill's page said as much and did
+            give some hints. I ended up placing the whole block of code in a big
+            try-catch block that fed the test the answer it wanted to get.
+          </p>
+          <img
+            src="./pictures/hyperskill_trycatch.png"
+            alt="Try catch block in code"
+          />
+          <p>
+            By "feeding" I mean that I had to hardcode the error messages
+            printed to the user, as actually reading the response error message
+            as specified in the instructions would fail the test.
+          </p>
+          <p>
+            Stage 5 was relatively easier, only really asked that we added
+            pagination to the project. It also suggested that we modified the
+            project to fit into the Model-View-Controller architecture patter, I
+            gave it an honest to god attempt but basically broke everything in
+            the process so I rolled back the changes, at that point I also felt
+            I had invested far too much time on the Music Advisor project and it
+            was time to wrap it up.
+          </p>
+          <p>
+            In the end it took a bit less time to complete than the couple
+            previous stages. The tests were complicated to get through but more
+            straightforward in the sense that they actually followed the
+            behavior specified in the instructions. When I finally got the
+            pop-up window telling me I had completed the project I literally
+            stood up from my seat:
+          </p>
+          <img
+            src="./pictures/hyperskill_finished.png"
+            alt="Message shown when finishing a hyperskill project"
+          />
+          <p>
+            I'm happy to put the <strong>Music Advisor</strong> behind me and
+            start fresh, I decided on the
+            <strong>Account Service</strong> project to do second. It seems like
+            a good deal of the lessons learned in the previous project will
+            carry over and I'm crossing my fingers hoping I don't get stuck
+            again, as I only have about a week and a half to get through two
+            more projects to meet the June 29th deadline.
+          </p>
+          <hr />
+          <small>Uploaded on June 17, 2023</small>
+        </details>
+      </article>
       <article id="week08">
         <details open>
           <summary>
@@ -92,7 +176,7 @@
         </details>
       </article>
       <article id="week07">
-        <details open>
+        <details>
           <summary>
             <h3>Week 07: Lightning Talks Part 1</h3>
             <p>
@@ -801,6 +885,170 @@
           </p>
           <hr />
           <small>Uploaded on April 24, 2023</small>
+        </details>
+      </article>
+      <article id="week02">
+        <details>
+          <summary>
+            <h3>Week 02: Onboarding Part 2</h3>
+          </summary>
+          <hr />
+          <p>
+            The second week at Encora was shorter due to holidays but still
+            packed with tons of new stuff. This time around I had the benefit of
+            having gone through most of the compliance courses already so some
+            of the topics were already familiar before the meetings.
+          </p>
+          <p>
+            The first class of the week was with Roberto to talk about the
+            importance of the monthly “town hall” style meeting and the role
+            that transparency plays at Encora. He also talked about the upcoming
+            Hacker House event in San Luis Potosi.
+          </p>
+          <p>
+            Next up was The Art of Feedback with Anabel Montiel. Feedback is
+            critical at any IT company, some of the recommended material for
+            this week was quick to point out that not having a proper feedback
+            loop was one of the most common causes for software projects to
+            fail. Because Encora has a very horizontal structure the developers
+            are expected to guide their own behavior based on the feedback they
+            receive from clients or within their team. This approach is summed
+            up by the word Ubuntu and its meaning: “I'm at my best when you're
+            at your best”.
+          </p>
+          <p>Some of the recommendations for giving feedback:</p>
+          <ol>
+            <li>Don't delay and make it worse</li>
+            <li>Be empathetic</li>
+            <li>Be clear about expectations</li>
+            <li>Be comfortable with difficult emotions</li>
+            <li>Don't be nice, be helpful</li>
+            <li>1 on 1 and group feedback are different</li>
+            <li>Follow up and recognize progress</li>
+            <li>Make the person feel safe</li>
+          </ol>
+          <p>
+            While some of the recommendations for receiving feedback were to “do
+            it early and do it often”, that is to actively seek out feedback
+            sessions as that will allow us to correct the course early on if
+            we're not moving in the right direction. When receiving feedback,
+            it's also important to do it with an open mind and focus on the
+            content of the message more so than the way it is delivered.
+          </p>
+          <p>
+            Our next talk was with the IT department. We talked about their role
+            at Encora but also the stuff we should and shouldn't do,
+            recommendations regarding use of antivirus, system updates, how to
+            create strong passwords, etc. Related to this was also the Security
+            Keynotes compliance course that talked about workplace and digital
+            security: Tailgating, phishing, vishing, shoulder surfing. As well
+            as security while working remotely: Having a clean desk, lockable
+            cabinets, locking your laptop, etc.
+          </p>
+          <p>
+            One of the most interesting classes of the week was the Getting
+            Things Done module. GTD is a productivity
+            technique-slash-methodology that consists of five steps:
+          </p>
+          <p></p>
+          <ol>
+            <li>Capture: Write down what's on your mind.</li>
+            <li>
+              Process: Decide if a captured item is actionable and whether it's
+              something we should focus on right now or later
+            </li>
+            <li>
+              Organize: Put things in the right place, give it a spot in the
+              calendar or a to-do list.
+            </li>
+            <li>
+              Review: Frequently modify, add or remove elements from your lists.
+            </li>
+            <li>Act: As the nike slogan says: “Just do it”</li>
+          </ol>
+          <p>
+            In addition to everything else we had some recommended reading and
+            vids for the week, the most interesting to me was the Search inside
+            Yourself talk by Chade-Meng Tan. It enclosed a few different
+            concepts in a complete framework for Emotional Intelligence and
+            discussed how it can help us achieve our goals.
+          </p>
+          <hr />
+          <small>Uploaded on June 17, 2023</small>
+        </details>
+      </article>
+      <article id="week01">
+        <details>
+          <summary>
+            <h3>Week 01: Onboarding Part 1</h3>
+          </summary>
+          <hr />
+          <p>
+            Between the onboarding meetings and the compliance courses we've
+            learned a ton during our first week at Encora:
+          </p>
+          <p>
+            On the first day we were shown some of the specifics of the
+            apprentice program, it'll have a duration of about 3 months, the
+            first couple of weeks will be focused on learning about Encora's
+            processes and corporate culture, with the rest being more technical.
+            It is during this latter stage that the hiring and allocation
+            process will start for those who show that their existing skills are
+            already a good match for one of Encora's client companies.
+          </p>
+          <p>
+            During the introductory week we've had meetings introducing some
+            aspects of Encora: The Mentors, the Leadership Teams, Office
+            Management, Encora People Care, etc.
+          </p>
+          <p>
+            Mentors are voluntary Encora staff who chose to help develop junior
+            staff, the approach to mentorship at Encora is particular in that it
+            is expected that Mentors put the mentees on the right track to
+            arrive at a conclusion themselves rather than feeding them
+            solutions.
+          </p>
+          <p>
+            Leadership Teams are groups within the organization, they can vary
+            in their focus, some of the most active on slack are the LGBT team
+            and Cineclub Encora, the people in charge of The Hub are also a LT.
+          </p>
+          <p>
+            Office Manager oversee the local offices of Encora, they negotiate
+            agreements with local businesses to provide benefits and discounts
+            for those that are part of Encora, they organize events to bring the
+            community together and are also in charge of making sure Encora
+            employees have the right equipment for performing their
+            responsibilities.
+          </p>
+          <p>
+            Encora People Care is an organization within Encora that looks to
+            get involved with NGOs, some of the events they've organized are
+            blood donation drives, pet food drives, donations for vulnerable
+            groups, Christmas dinners, etc. Participation is completely
+            voluntary, there have been cases where some cause doesn't get enough
+            traction for an event.
+          </p>
+          <p>
+            The compliance courses were packed with information as well, on Day
+            1 Orientation Program Encora Overview we learned about some of
+            Encora's corporate leaders and their history. Encora's core values
+            are represented by the anagram ENCODE: Enterprise Value, Curiosity,
+            Ownership, Diversity and Excellence. We also learned about Encora's
+            services, covering a wide range of topics represented by the
+            keywords Envision, Enable, Engineer and Engage.
+          </p>
+          <p>
+            The compliance courses were packed with information as well, on Day
+            1 Orientation Program Encora Overview we learned about some of
+            Encora's corporate leaders and their history. Encora's core values
+            are represented by the anagram ENCODE: Enterprise Value, Curiosity,
+            Ownership, Diversity and Excellence. We also learned about Encora's
+            services, covering a wide range of topics represented by the
+            keywords Envision, Enable, Engineer and Engage.
+          </p>
+          <hr />
+          <small>Uploaded on June 17, 2023</small>
         </details>
       </article>
     </main>
