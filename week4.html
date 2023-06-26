@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Pico.CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Jose Arana Blog</title>
+  </head>
+  <body>
+    <nav class="container">
+      <ul>
+        <li>
+          <a href="index.html">
+            <strong>Francisco Arana - Personal Blog</strong>
+          </a>
+        </li>
+      </ul>
+      <ul>
+        <li><a href="aboutme.html">About Me</a></li>
+        <li><a href="techlogs.html">Technical Logs</a></li>
+        <li>
+          <details role="list" dir="rtl">
+            <summary aria-haspopup="listbox" role="link">Jump To</summary>
+            <ul role="listbox">
+              <li><a href="week10.html">Week 10</a></li>
+              <li><a href="week9.html">Week 09</a></li>
+              <li><a href="week8.html">Week 08</a></li>
+              <li><a href="week7.html">Week 07</a></li>
+              <li><a href="week6.html">Week 06</a></li>
+              <li><a href="week5.html">Week 05</a></li>
+              <li><a href="week4.html">Week 04</a></li>
+              <li><a href="week3.html">Week 03</a></li>
+              <li><a href="week2.html">Week 02</a></li>
+              <li><a href="week1.html">Week 01</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </nav>
+    <main class="container">
+      <div class="grid">
+        <div><a href="week5.html">Go to Week 05</a></div>
+        <div style="text-align: right">
+          <a href="week3.html">Go to Week 03</a>
+        </div>
+      </div>
+      <article>
+        <h3>Week 04: A Breakable Toy Experiment</h3>
+        <p>
+          <strong>(Apr 25 - May 9) Individual console line application</strong>
+        </p>
+        <hr />
+        <p>
+          After delivering the team coding assignments we were given a new task,
+          we now had to recreate <em>Ledger</em> a CLI application for
+          accounting. The real <em>Ledger</em> is a very powerful and complete
+          tool, however, so in order to keep things reasonable we only had to
+          implement three commands and three flags. The commands given were
+          <strong>register, balance, and print.</strong> while the flags to
+          implement were
+          <strong>--sort, --file, and --price-db.</strong>
+        </p>
+        <h4>Command: register</h4>
+        <p>
+          The command <strong>register</strong> outputs a list of all the
+          transactions, formatted like a double entry accounting book. Going
+          left to right we have a date for the transaction, the accounts
+          involved, the value traded in the transaction and finally a running
+          balance, which is independent for each currency or symbol used.
+        </p>
+        <img src="./pictures/register.png" alt="output of register command" />
+        <p>
+          In order to output the data in this format the code must read through
+          every filename specified in "index.ledger". Then parse every entry
+          contained in the files and append them to a dictionary. The dictionary
+          is formatted like a JSON so that it can be read by the python library
+          <em>Pandas</em> and turned into a dataframe. This was done to
+          facilitate the task of formatting the output, filtering and sorting.
+        </p>
+        <img
+          src="./pictures/entrymaker.png"
+          alt="code used to parse through files"
+        />
+        <p>
+          By using the optional flag <strong>--account</strong> the table can be
+          narrowed down to only the transactions where the account specified was
+          involved. The choice was made to implement this functionality as a
+          flag instead of a positional attribute of
+          <strong>register</strong> because that was simpler to implement using
+          the argparse library.
+        </p>
+        <img
+          src="./pictures/register_a.png"
+          alt="output of register command when using account flag"
+        />
+        <h4>Command: balance</h4>
+        <p>
+          The command <strong>balance</strong>
+          outputs the total balance of all accounts. Because in the
+          <strong>register</strong> command we already have a running balance
+          column, we could reuse most of the code for register by moving it to
+          its own function. Then we simply use pandas to colapse the running
+          balance column, so we only keep the last value on it.
+        </p>
+        <img
+          src="./pictures/balance_brain.png"
+          alt="code used to create the balance output"
+        />
+        <p>
+          Like <strong>register</strong> this command could also make use of the
+          account flag to only show the total of the transactions involving that
+          account.
+        </p>
+        <img src="./pictures/balance_a.png" alt="output of balance command" />
+        <h4>Command: print</h4>
+        <p>
+          The command <strong>print</strong> was to me the simplest one, as it
+          only needs to read through the ledger data and prints it out in an
+          homogenized format. I reused most of the code from the previous two
+          commands. As with both previous commands, <strong>print</strong> can
+          make use of the account flag to select which accounts to actually
+          show.
+        </p>
+        <img src="./pictures/print.png" alt="output of print command" />
+        <h4>Flag: --prices-db</h4>
+        <p>
+          The <strong>--prices-db</strong> flag does two things: It tells ledger
+          that you want the output to show in a single currency, and in the
+          specified file it lets you define what currency to output and what the
+          exchange rate will be. Out of the optional flags this was the most
+          involved one, so much that the code was split off for the register
+          command, there is one version for its normal functioning and another
+          for when this command is called.
+        </p>
+        <img
+          src="./pictures/prices_code.png"
+          alt="code used to change units and convert according to exchange rate"
+        />
+        <p>
+          Compare the output when the function is not called and when it is:
+        </p>
+        <img
+          src="./pictures/prices_bal.png"
+          alt="output of balance when using prices-database command"
+        />
+        <img
+          src="./pictures/prices_reg.png"
+          alt="output of register when using prices-database command"
+        />
+        <h4>Flag: --file</h4>
+        <p>
+          The <strong>--file</strong> flag specifies what file should be used as
+          the index, the index.ledger text file contains the filenames of all
+          entries for ledger. Being that ledger is originally an accounting
+          tool, this could be considered a useful functionality to change
+          between clients, for example. In the case of our implementation though
+          we always default back to "index.ledger" when executing the code
+          again. The implementation of this flag was very simple, we converted
+          all references to index.ledger to variables and used an if statement
+          to check if the flag was being passed as an argument.
+        </p>
+        <img
+          src="./pictures/file_code.png"
+          alt="if statement used to check if file was passed as an argument"
+        />
+        <h4>Flag: --sort</h4>
+        <p>
+          The <strong>--sort</strong> flag is used to sort the output, the real
+          <em>Ledger</em> can take any EXPR as an argument, in our case we have
+          only included "date" and variations as valid arguments.
+        </p>
+        <img
+          src="./pictures/register_sorted.png"
+          alt="register output sorted by date"
+        />
+        <h4>Conclusion</h4>
+        <p>
+          Ledger is one of the most complex programs that I've built on my own,
+          if not the most complex. There was a moment when I felt like the
+          complexity was too much to handle by myself. But as I powered through
+          I found it really rewarding and by splitting my functions over many
+          files I found it easier to keep track of everything.
+        </p>
+        <p>
+          I made many mistakes while building Ledger, I should've read more
+          carefully what each function was supposed to do, as I found myself
+          having to go back to tweak the code many times. However I don't regret
+          starting to code without having the full picture, there was nothing i
+          wrote that didn't come useful later, and I hold the belief that
+          getting started is usually the most difficult part of any project.
+        </p>
+        <hr />
+        <small>Uploaded on May 9, 2023</small>
+      </article>
+      <div class="grid">
+        <div><a href="week5.html">Go to Week 05</a></div>
+        <div style="text-align: right">
+          <a href="week3.html">Go to Week 03</a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

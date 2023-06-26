@@ -2,17 +2,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Century Gothic", "Futura", sans-serif;
 }
 
-.hero {
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Black_and_white_Photography_%D8%B9%DA%A9%D8%A7%D8%B3%DB%8C_%D8%B3%DB%8C%D8%A7%D9%87_%D9%88_%D8%B3%D9%81%DB%8C%D8%AF-%D8%A7%D9%86%D8%AA%D8%B2%D8%A7%D8%B9%DB%8C_08.jpg/2560px-Black_and_white_Photography_%D8%B9%DA%A9%D8%A7%D8%B3%DB%8C_%D8%B3%DB%8C%D8%A7%D9%87_%D9%88_%D8%B3%D9%81%DB%8C%D8%AF-%D8%A7%D9%86%D8%AA%D8%B2%D8%A7%D8%B9%DB%8C_08.jpg");
-    background-color: #cccccc;
-}
-
-.titledark {
-    color: #24333e;
-    text-shadow: 0px 0px 3px grey;
-}
-
-h1 {
-    color: #24333e;
-    text-shadow: 0px 0px 5px grey;
+article {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }

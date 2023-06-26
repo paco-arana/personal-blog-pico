@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Pico.CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Jose Arana Blog</title>
+  </head>
+  <body>
+    <nav class="container">
+      <ul>
+        <li>
+          <a href="index.html">
+            <strong>Francisco Arana - Personal Blog</strong>
+          </a>
+        </li>
+      </ul>
+      <ul>
+        <li><a href="aboutme.html">About Me</a></li>
+        <li><a href="techlogs.html">Technical Logs</a></li>
+        <li>
+          <details role="list" dir="rtl">
+            <summary aria-haspopup="listbox" role="link">Jump To</summary>
+            <ul role="listbox">
+              <li><a href="week10.html">Week 10</a></li>
+              <li><a href="week9.html">Week 09</a></li>
+              <li><a href="week8.html">Week 08</a></li>
+              <li><a href="week7.html">Week 07</a></li>
+              <li><a href="week6.html">Week 06</a></li>
+              <li><a href="week5.html">Week 05</a></li>
+              <li><a href="week4.html">Week 04</a></li>
+              <li><a href="week3.html">Week 03</a></li>
+              <li><a href="week2.html">Week 02</a></li>
+              <li><a href="week1.html">Week 01</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </nav>
+    <main class="container">
+      <div class="grid">
+        <div><a href="index.html">Go to New Entries</a></div>
+        <div></div>
+      </div>
+      <article>
+        <details open>
+          <summary>
+            <h3>Technical Log: Music Advisor</h3>
+            <p>
+              <strong>Music recommendation app using Spotify API</strong>
+            </p>
+          </summary>
+          <hr />
+          <h4>Overview</h4>
+          <p>
+            The goal of the project is to build a music recommendation app that
+            we will control from the command line. The app will interact with
+            the Spotify API and will be capable of retrieving songs, albums and
+            playlists in a handful of different categories.
+          </p>
+          <h4>Context</h4>
+          <p>
+            For those with access to Hyperskill the project page can be found by
+            following
+            <a href="https://hyperskill.org/projects/62">this link.</a>
+          </p>
+          <p>
+            The project is divided into five stages that we must complete in
+            order:
+          </p>
+          <ol>
+            <li>
+              In the first stage we create a mockup of the functioning of our
+              website.
+            </li>
+            <li>
+              In the second stage we connect to the Spotify API and authenticate
+              ourselves so we can use it.
+            </li>
+            <li>
+              In the third stage we create a Java server so we can receive
+              responses from Spotify.
+            </li>
+            <li>
+              In the fourth stage we parse and display the responses from
+              Spotify.
+            </li>
+            <li>
+              Finally, we add pagination to our app and rewrite it in the
+              Model-View-Controller architecture.
+            </li>
+          </ol>
+          <p>
+            The app receives commands from the IDE terminal and displays the
+            results of our query accordingly, however each time we run the app
+            we must authenticate ourselves using the “auth” command. Besides the
+            authentication command we have “new”, which shows the latest album
+            releases; “featured”, which returns Spotify's featured page,
+            “categories” which returns all category IDs that we can use to
+            search for playlists and finally “playlists (category id)” which
+            returns the playlists matching the category ID that is given.
+          </p>
+          <p>
+            Late into the project we also add “next” to move to the next page in
+            the same result, “prev” to move back through pages and “exit” which
+            terminates the application.
+          </p>
+          <h4>Solution</h4>
+          <p>
+            Because we were still trying to understand the basics of Java the
+            project structure was kept to a single file. The logic is located
+            inside a while loop that iterates through the code when we give it a
+            new command. Inside the while loop there is a big if-else statement
+            that checks the text in the command given against reference values.
+          </p>
+          <p>
+            For example, if command.equals(“new”) {...} we proceed to create a
+            new server, send the get request and receive it. From then we have
+            another if-else statement, if the request was successful (code 200)
+            we proceed to parse it and show it to the user, otherwise we display
+            an error.
+          </p>
+          <p>
+            Another possible point where an error can happen is when the request
+            itself is composed, if the auth key we send along with it is not
+            valid we will run into an exception, we use a try-catch block to
+            deal with this scenario.
+          </p>
+          <p>
+            All of this is done procedurally, so we repeat many lines of code
+            since the requests are similar for all of the main commands.
+          </p>
+          <h4>Alternative Solutions</h4>
+          <p>
+            A better alternative to writing the code procedurally would have
+            been to create a “HttpSender.java” object so that we could reuse the
+            code that is pretty much identical for all commands. The Hyperskill
+            solution's page provides some examples of how the project can be
+            further broken down into parts to make it easier to understand or to
+            fit the Model-View-Controller architecture.
+          </p>
+          <hr />
+          <small>Uploaded on June 26, 2023</small>
+        </details>
+      </article>
+      <article>
+        <details open>
+          <summary>
+            <h3>Technical Log: Cinema Room</h3>
+            <p>
+              <strong>REST service using Spring Boot</strong>
+            </p>
+          </summary>
+          <hr />
+          <h4>Overview</h4>
+          <p>
+            The goal of the project is to build a REST service to help us manage
+            a single-room cinema using Spring Boot. The service should receive
+            HTTP requests and return JSON data representing the state of our
+            cinema's seats.
+          </p>
+          <h4>Context</h4>
+          <p>
+            For those with access to Hyperskill the project page can be found by
+            following
+            <a href="https://hyperskill.org/projects/189">this link.</a>
+          </p>
+          <p>
+            The project is divided into four stages that we must complete in
+            order:
+          </p>
+          <ol>
+            <li>
+              In the first stage we create a single endpoint that returns the
+              seats in our cinema. We send the requests to it using Postman.
+            </li>
+            <li>
+              In the second stage we add a new endpoint to allow users to
+              purchase tickets to the seats, we split our seats in two piles,
+              available and booked.
+            </li>
+            <li>
+              In the third stage we add a UUID token to each seat/ticket and
+              create a new endpoint that receives the token and lets us refund
+              the money to the customer.
+            </li>
+            <li>
+              Finally, we add an endpoint that displays statistics for
+              administrator use only, protected by a password.
+            </li>
+          </ol>
+          <p>
+            The server receives HTTP requests and must return either the
+            response expected or an error when the information is conflicting.
+            We should display different errors when a user tries to book a seat
+            twice, book a seat that does not exist or try to get a refund for a
+            seat that was never bought in the first place.
+          </p>
+          <h4>Solution</h4>
+          <p>
+            We tried to model the cinema's real-life functioning in our file
+            structure. The project is split into four files:
+          </p>
+          <ol>
+            <li>
+              <strong>Main.java - </strong>
+              Here we receive the requests and validate them, we initiate the
+              cinema if it doesn't exist yet, and return the response objects.
+            </li>
+            <li>
+              <strong>Cinema.java - </strong>
+              Contains all the methods associated to the business logic of the
+              cinema, it contains the “available_seats” and “booked_seats”
+              ArrayLists that are groupings of Seat objects. The cinema is a
+              singleton object.
+            </li>
+            <li>
+              <strong>Seat.java - </strong>
+              Is the model for every seat, it has fields for its position (row
+              and column), a price and a unique token. It only has methods that
+              return the object formatted as a JSON so that it can be sent as a
+              response when buying or refunding a ticket.
+            </li>
+            <li>
+              <strong>CustomResponse.java - </strong>
+              Is used to create the custom ResponseEntity Object to be returned
+              when there is an error in the requests.
+            </li>
+          </ol>
+          <h4>Alternative Solutions</h4>
+          <p>
+            A common pattern in other solutions to this same project is the
+            separation of the REST controller from the entry point of the
+            application in Main.java. This is a good example of separation of
+            concerns.
+          </p>
+          <p>
+            Other solutions also make use of annotations to handle repetitive
+            code like using @Getters or @Setters to generate all the getter and
+            setter methods for the seats instead of writing them manually. It
+            was also common to see ObjectMapper being used to return the JSON
+            for the Seat object instead of the methods we used. In which case
+            @JsonIgnore was used to prevent certain fields from showing up in
+            the output.
+          </p>
+          <hr />
+          <small>Uploaded on June 26, 2023</small>
+        </details>
+      </article>
+    </main>
+  </body>
+</html>

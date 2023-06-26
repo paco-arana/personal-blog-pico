@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Pico.CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Jose Arana Blog</title>
+  </head>
+  <body>
+    <nav class="container">
+      <ul>
+        <li>
+          <a href="index.html">
+            <strong>Francisco Arana - Personal Blog</strong>
+          </a>
+        </li>
+      </ul>
+      <ul>
+        <li><a href="aboutme.html">About Me</a></li>
+        <li><a href="techlogs.html">Technical Logs</a></li>
+        <li>
+          <details role="list" dir="rtl">
+            <summary aria-haspopup="listbox" role="link">Jump To</summary>
+            <ul role="listbox">
+              <li><a href="week10.html">Week 10</a></li>
+              <li><a href="week9.html">Week 09</a></li>
+              <li><a href="week8.html">Week 08</a></li>
+              <li><a href="week7.html">Week 07</a></li>
+              <li><a href="week6.html">Week 06</a></li>
+              <li><a href="week5.html">Week 05</a></li>
+              <li><a href="week4.html">Week 04</a></li>
+              <li><a href="week3.html">Week 03</a></li>
+              <li><a href="week2.html">Week 02</a></li>
+              <li><a href="week1.html">Week 01</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </nav>
+    <main class="container">
+      <div class="grid">
+        <div><a href="week6.html">Go to Week 06</a></div>
+        <div style="text-align: right">
+          <a href="week4.html">Go to Week 04</a>
+        </div>
+      </div>
+      <article id="week05">
+        <h3>Week 05: To-do Application Part 1</h3>
+        <p>
+          <strong>(May 12- May 19) React Frontend Development</strong>
+        </p>
+        <hr />
+        <p>
+          With Ledger CLI behind us it seemed like things couldn't get much
+          harder, looking back on it one week later that seems like a very
+          optimistic view. Being objective the premise is much simpler, To-do
+          apps are very common beginner projects, in essence it should be much
+          simpler than the accounting tool that is Ledger:
+        </p>
+        <blockquote>
+          You are working with a client that needs to implement a to do list to
+          help manage their tasks in their daily job. The client asked you to
+          implement the following functionality:
+        </blockquote>
+        <h4>Back End</h4>
+        <p>
+          The back end is proving to be the hardest to crack despite it only
+          needing to handle a few requests. Personally I have no experience with
+          Java, the language prescribed for the assignment, much less so with
+          its related tools like Spring, Maven or Java Collections. To this we
+          also have to add the technical issues caused by ZScaler, the company's
+          VPN, for obvious security reasons it is particularly aggressive, which
+          made it almost impossible to deploy locally for testing. Most of us
+          had to resort to disabling during testing which is not an ideal
+          solution.
+        </p>
+        <img
+          src="./pictures/address_failure.png"
+          alt="View of Intellij Idea failing to start the local servers"
+        />
+        <p>
+          It took essentially the whole week to get a CRUD server to run, as
+          once we had solved the ZScaler issue we still had to deal with the
+          fiddly Maven installation process, the breaking changes that Spring
+          3.0 introduced that rendered most online guides useless and in my case
+          my own lack of familiarity with backend development.
+        </p>
+        <img
+          src="./pictures/maven_win.png"
+          alt="Maven failed to install manually or with brew"
+        />
+        <h4>Front End</h4>
+        <p>
+          The front end is where most of the functionality of the program is
+          located, the specifications were that it had to be built using React,
+          a javascript framework. I was already familiarized with react from
+          previous projects, but still decided to use a tutorial for building
+          the base of the project. Compared to the back end we advanced a great
+          deal in the span of a couple of days, with most of the functionality
+          implemented.
+        </p>
+        <img
+          src="./pictures/todo_chrome_one.png"
+          alt="View of the React app as it stands right now"
+        />
+        <p>
+          Due to being unable to get the back end running in a timely manner the
+          app is currently running with a Firebase database, the functions that
+          communicate with the database have been grouped together to make the
+          change later to the local java backend
+        </p>
+        <img
+          src="./pictures/firebase_vscode.png"
+          alt="Functions that pull data from Firebase"
+        />
+        <hr />
+        <small>Uploaded on May 21, 2023</small>
+      </article>
+      <div class="grid">
+        <div><a href="week6.html">Go to Week 06</a></div>
+        <div style="text-align: right">
+          <a href="week4.html">Go to Week 04</a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

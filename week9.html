@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Pico.CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Jose Arana Blog</title>
+  </head>
+  <body>
+    <nav class="container">
+      <ul>
+        <li>
+          <a href="index.html">
+            <strong>Francisco Arana - Personal Blog</strong>
+          </a>
+        </li>
+      </ul>
+      <ul>
+        <li><a href="aboutme.html">About Me</a></li>
+        <li><a href="techlogs.html">Technical Logs</a></li>
+        <li>
+          <details role="list" dir="rtl">
+            <summary aria-haspopup="listbox" role="link">Jump To</summary>
+            <ul role="listbox">
+              <li><a href="week10.html">Week 10</a></li>
+              <li><a href="week9.html">Week 09</a></li>
+              <li><a href="week8.html">Week 08</a></li>
+              <li><a href="week7.html">Week 07</a></li>
+              <li><a href="week6.html">Week 06</a></li>
+              <li><a href="week5.html">Week 05</a></li>
+              <li><a href="week4.html">Week 04</a></li>
+              <li><a href="week3.html">Week 03</a></li>
+              <li><a href="week2.html">Week 02</a></li>
+              <li><a href="week1.html">Week 01</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </nav>
+    <main class="container">
+      <div class="grid">
+        <div><a href="week10.html">Go to Week 10</a></div>
+        <div style="text-align: right">
+          <a href="week8.html">Go to Week 08</a>
+        </div>
+      </div>
+      <article>
+        <h3>Week 09: Hyperskill Part 2</h3>
+        <p>
+          <strong>(June 11 - June 17) Music Advisor Wrap-up</strong>
+        </p>
+        <hr />
+        <p>
+          No big change of pace this week, we picked up right where we had left
+          off, having just finished stage 2 of the
+          <strong>Music Advisor</strong>. Stages 3, 4 and 5 were lighter on the
+          theory but much heavier on the practice. I spent a couple days stuck
+          at stage 3/5, just couldn't wrap my mind around how HTTP requests
+          worked on Java and if I'm honest never really felt I understood it
+          completely, I sort of pieced it through trial and error. The weird
+          thing is that now that I look back on it it's crystal clear what it
+          does, but at the time? I felt like I was writing a magic spell rather
+          than code:
+        </p>
+        <img
+          src="./pictures/hyperskill_authcode.png"
+          alt="Authorization code"
+        />
+        <p>
+          The good part is that I'd then have to do more of the same for stage
+          4/5, so now it's almost burnt into my memory, it should be much easier
+          to figure it out if i ever do forget it.
+        </p>
+        <p>
+          The real challenge for stage 4 was actually the tests. I spent a whole
+          afternoon figuring out how to work around one of the tests, as it
+          seemed like the logic of the test itself was internally flawed in some
+          way. The comments in Hyperskill's page said as much and did give some
+          hints. I ended up placing the whole block of code in a big try-catch
+          block that fed the test the answer it wanted to get.
+        </p>
+        <img
+          src="./pictures/hyperskill_trycatch.png"
+          alt="Try catch block in code"
+        />
+        <p>
+          By "feeding" I mean that I had to hardcode the error messages printed
+          to the user, as actually reading the response error message as
+          specified in the instructions would fail the test.
+        </p>
+        <p>
+          Stage 5 was relatively easier, only really asked that we added
+          pagination to the project. It also suggested that we modified the
+          project to fit into the Model-View-Controller architecture patter, I
+          gave it an honest to god attempt but basically broke everything in the
+          process so I rolled back the changes, at that point I also felt I had
+          invested far too much time on the Music Advisor project and it was
+          time to wrap it up.
+        </p>
+        <p>
+          In the end it took a bit less time to complete than the couple
+          previous stages. The tests were complicated to get through but more
+          straightforward in the sense that they actually followed the behavior
+          specified in the instructions. When I finally got the pop-up window
+          telling me I had completed the project I literally stood up from my
+          seat:
+        </p>
+        <img
+          src="./pictures/hyperskill_finished.png"
+          alt="Message shown when finishing a hyperskill project"
+        />
+        <p>
+          I'm happy to put the <strong>Music Advisor</strong> behind me and
+          start fresh, I decided on the <strong>Account Service</strong> project
+          to do second. It seems like a good deal of the lessons learned in the
+          previous project will carry over and I'm crossing my fingers hoping I
+          don't get stuck again, as I only have about a week and a half to get
+          through two more projects to meet the June 29th deadline.
+        </p>
+        <hr />
+        <small>Uploaded on June 17, 2023</small>
+      </article>
+      <div class="grid">
+        <div><a href="week10.html">Go to Week 10</a></div>
+        <div style="text-align: right">
+          <a href="week8.html">Go to Week 08</a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
