@@ -57,6 +57,7 @@
             </p>
           </summary>
           <hr />
+          <img src="pictures/techlog_musicadvisor.png" />
           <h4>Overview</h4>
           <p>
             The goal of the project is to build a music recommendation app that
@@ -119,6 +120,7 @@
             new command. Inside the while loop there is a big if-else statement
             that checks the text in the command given against reference values.
           </p>
+          <img src="pictures/techlog_macode.png" />
           <p>
             For example, if command.equals(“new”) {...} we proceed to create a
             new server, send the get request and receive it. From then we have
@@ -158,6 +160,7 @@
             </p>
           </summary>
           <hr />
+          <img src="pictures/techlog_crtest.png" />
           <h4>Overview</h4>
           <p>
             The goal of the project is to build a REST service to help us manage
@@ -233,6 +236,7 @@
               when there is an error in the requests.
             </li>
           </ol>
+          <img src="pictures/techlog_crcode.png" />
           <h4>Alternative Solutions</h4>
           <p>
             A common pattern in other solutions to this same project is the
@@ -248,6 +252,49 @@
             for the Seat object instead of the methods we used. In which case
             @JsonIgnore was used to prevent certain fields from showing up in
             the output.
+          </p>
+          <hr />
+          <small>Uploaded on June 26, 2023</small>
+        </details>
+      </article>
+      <article>
+        <details open>
+          <summary>
+            <h3>Technical Log: Account Service (WIP)</h3>
+            <p>
+              <strong>Employee payroll manager using Spring Security</strong>
+            </p>
+          </summary>
+          <hr />
+          <h4>Overview</h4>
+          <p>
+            The goal of the project is to build a REST service to help us manage
+            a single-room cinema using Spring Boot. The service should receive
+            HTTP requests and return JSON data representing the state of our
+            cinema's seats.
+          </p>
+          <h4>Context</h4>
+          <p>
+            For those with access to Hyperskill the project page can be found by
+            following
+            <a href="https://hyperskill.org/projects/217">this link.</a>
+          </p>
+          <p>
+            The project is divided into seven stages that we must complete in
+            order:
+          </p>
+          <img src="pictures/techlog_asstages.png" />
+          <p>
+            The service implements a number of endpoints for signing up,
+            changing passwords, retrieve employee payrolls as well as assigning
+            and updating credentials.
+          </p>
+          <h4>Solution</h4>
+          <p>
+            In order to keep the project structure manageable every endpoint
+            will be split into its own class. This will ensure that the
+            functionality of the different modules of the service will be
+            isolated from one another.
           </p>
           <hr />
           <small>Uploaded on June 26, 2023</small>
