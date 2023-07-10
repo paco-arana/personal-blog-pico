@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Pico.CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Jose Arana Blog</title>
+  </head>
+  <body>
+    <nav class="container">
+      <ul>
+        <li>
+          <a href="index.html">
+            <strong>Francisco Arana - Personal Blog</strong>
+          </a>
+        </li>
+      </ul>
+      <ul>
+        <li><a href="aboutme.html">About Me</a></li>
+        <li><a href="techlogs.html">Technical Logs</a></li>
+        <li>
+          <details role="list" dir="rtl">
+            <summary aria-haspopup="listbox" role="link">Jump To</summary>
+            <ul role="listbox">
+              <li><a href="week12.html">Week 12</a></li>
+              <li><a href="week11.html">Week 11</a></li>
+              <li><a href="week10.html">Week 10</a></li>
+              <li><a href="week9.html">Week 09</a></li>
+              <li><a href="week8.html">Week 08</a></li>
+              <li><a href="week7.html">Week 07</a></li>
+              <li><a href="week6.html">Week 06</a></li>
+              <li><a href="week5.html">Week 05</a></li>
+              <li><a href="week4.html">Week 04</a></li>
+              <li><a href="week3.html">Week 03</a></li>
+              <li><a href="week2.html">Week 02</a></li>
+              <li><a href="week1.html">Week 01</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </nav>
+    <main class="container">
+      <div class="grid">
+        <div></div>
+        <div style="text-align: right">
+          <a href="week11.html">Go to Week 11</a>
+        </div>
+      </div>
+      <article id="week12">
+        <h3>Week 12: Open Source Part 1</h3>
+        <p>
+          <strong
+            >(July 3 - July 10) Introduction to Open Source Software</strong
+          >
+        </p>
+        <hr />
+        <p>
+          When we were told we had to find an open source project to contribute
+          to I had a few candidates in mind, I'm a fan of open source software,
+          but until now only as a user, I remember using Audacity for mixing
+          music tracks together for a Mother's day presentation in middle
+          school, using GIMP and Krita as free Photoshop alternatives with mixed
+          success, the LibreOffice suite, Blender for 3d modeling and rendering,
+          the list goes on and on.
+        </p>
+        <p>
+          But all the open source software mentioned is pretty mature and is
+          unlikely to have any low hanging fruit for someone new to the project.
+          I instead looked at another project that I use pretty often: Lemuroid
+          is an Android app for playing retro games, all the way from the NES to
+          the Nintendo 64, being that I've used it for a while I had noticed
+          some issues with the spanish translation.
+        </p>
+        <img
+          style="
+            border-radius: 20px;
+            width: 95%;
+            margin: auto;
+            display: flex;
+            margin-bottom: 30px;
+          "
+          src="./pictures/week12_phoneshot.jpg"
+        />
+        <p>
+          However it turned out Lemuroid has a separate repository in Crowdin
+          for its translation files, and what translation goes in the next
+          release is decided through comunity votes. I did a few translations
+          but I'd have to look somewhere else for my first pull request.
+        </p>
+        <img src="./pictures/week12_tlfix.png" />
+        <p>
+          I ended up doing my very first contribution to the
+          "first-contributions" repo which is pretty much a hands-on tutorial to
+          learn how to make pull requests. From there I moved to the recomended
+          projects list, landing on the Google Chrome repositories.
+        </p>
+        <p>
+          I found an issue in the developer.chrome.com tracker and set out to
+          fix it, then I did the corresponding pull request. I submitted it for
+          approval, but I'm not sure if it'll even be considered, I followed the
+          guidelines to the letter but the notifications under the PR seem to
+          suggest that I need to be whitelisted by the maintainers in some way.
+        </p>
+        <img src="./pictures/week12_pr.png" />
+        <p>
+          Without doing more pull requests it's hard to know since I don't have
+          a frame of reference. I've already started looking at other issues for
+          next week in order to fix that.
+        </p>
+        <p>
+          Overall I think the main benefit of contributing to open source
+          software so far has been looking at the variation in project
+          structure. Some of the repositories that I visited were a challenge to
+          navigate through. Untangling the logic of each project seems like just
+          as big of a challenge as the issues themselves.
+        </p>
+        <hr />
+        <small>Uploaded on July 3, 2023</small>
+      </article>
+      <div class="grid">
+        <div></div>
+        <div style="text-align: right">
+          <a href="week11.html">Go to Week 11</a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

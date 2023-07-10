@@ -28,6 +28,8 @@
           <details role="list" dir="rtl">
             <summary aria-haspopup="listbox" role="link">Jump To</summary>
             <ul role="listbox">
+              <li><a href="week12.html">Week 12</a></li>
+              <li><a href="week11.html">Week 11</a></li>
               <li><a href="week10.html">Week 10</a></li>
               <li><a href="week9.html">Week 09</a></li>
               <li><a href="week8.html">Week 08</a></li>
@@ -48,6 +50,76 @@
         <div><a href="index.html">Go to New Entries</a></div>
         <div></div>
       </div>
+      <article>
+        <details open>
+          <summary>
+            <h3>Technical Log: Chrome Repository</h3>
+            <p>
+              <strong>Styling Fix in developer.chrome.com</strong>
+            </p>
+          </summary>
+          <hr />
+          <h4>Overview</h4>
+          <p>
+            This tech log details a styling fix to solve the
+            developer.chrome.com repository issue #6782: "Aside component
+            background collides with the left-aligned images"
+          </p>
+          <h4>Context</h4>
+          <p>
+            The full text for issue #6782 can be found by following
+            <a
+              href="https://github.com/GoogleChrome/developer.chrome.com/issues/6782"
+              >this link.</a
+            >
+          </p>
+          <p>
+            As stated in the issue title the light blue background runs the full
+            width of the text box and when other elements are present and
+            aligned to the right of the text box it overlaps these elements in
+            an unsightly way.
+          </p>
+          <img src="pictures/techlog_bgoverlap.png" />
+          <h4>Solution</h4>
+          <p>
+            Using the developer tools of the Chrome browser we determined that
+            it was an issue with the styling of the "aside" class.
+          </p>
+          <p>
+            We forked the project from the Github page, cloned it to our machine
+            and created a new branch to work on. The webpage uses SASS for it's
+            styling, it was my first time working with it but it wasn't a huge
+            difference from using vanilla CSS.
+          </p>
+          <img src="pictures/techlog_bgcode.png" />
+          <p>
+            We modified the file named "_aside.scss" with the line "display:
+            flow-root;" to fix the background overlap issues.
+          </p>
+          <img
+            style="
+              border-radius: 20px;
+              width: 95%;
+              margin: auto;
+              display: flex;
+              margin-bottom: 30px;
+            "
+            src="pictures/techlog_bgfix.png"
+          />
+          <h4>Alternative Solutions</h4>
+          <p>
+            It's possible to use "display: flex;" as well but while it fixes
+            this one example it actually causes a number of issues with other
+            elements sharing the "aside" class and its styling. It wasn't
+            feasible to use inline styles either because the webpage uses
+            markdown instead of pure html, which complicates the use of inline
+            styles or the practice of adding multiple classes to a single html
+            tag.
+          </p>
+          <hr />
+          <small>Uploaded on July 9, 2023</small>
+        </details>
+      </article>
       <article>
         <details open>
           <summary>
